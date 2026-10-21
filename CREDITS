@@ -1,0 +1,22 @@
+Blocks & Ledgers — a whiteboard film of "Basics with Block: Blocks and Distributed Ledgers"
+Article and character "Block": blackboardblock (https://blackboardblock.medium.com/basics-with-block-blocks-and-distributed-ledgers-ef7ec49010fb).
+Names in the ledger example (Ana, Ben, Cem) are invented.
+
+Picture
+  Drawn entirely by code (film.js, engine/wb.js). No generated images, no stock footage, no third-party artwork.
+  engine/wb.js is adapted from the whiteboard engine of the Lemo-Opuscar style library
+  (https://github.com/lemomo-ai/lemo-opuscar, MIT; notice in engine/LICENSE), made size-aware for 1080×1920.
+
+Lettering (on the board)
+  EMS Tech — SIL Open Font License 1.1 (fonts/OFL.txt). Single-line font by Sheldon B. Michaels,
+  a derivative of "Architects Daughter" by Kimberly Geswein; SVG conversion by Windell H. Oskay (Evil Mad Scientist).
+
+Voice
+  None. The film has no narration and no subtitles: every word is handwritten on the board.
+
+Music
+  Original score, synthesized in music.py: kalimba, music box and upright bass pizzicato by physical/modal
+  modelling (Lemo-Opuscar core/audio/pluck.py), shaker synthesized from filtered noise. No samples.
+
+Foley and sound design
+  Original, synthesized in mix.py (marker on gloss, squeaks, magnets, eraser, oven ding, cap, whooshes, room tone).

@@ -1,6 +1,6 @@
 # Blocks & Ledgers — whiteboard film (work in progress)
 
-A 50-second vertical explainer of "Basics with Block: Blocks and Distributed Ledgers" (blackboardblock on Medium), made with the Lemo-Opuscar **Whiteboard Explainer** style.
+A 53-second vertical explainer of "Basics with Block: Blocks and Distributed Ledgers" (blackboardblock on Medium), made with the Lemo-Opuscar **Whiteboard Explainer** style.
 
 ## Brief (fixed)
 
@@ -10,16 +10,18 @@ A 50-second vertical explainer of "Basics with Block: Blocks and Distributed Led
 
 ## Status
 
-- [x] Library fetched, core + music tiers installed (`sh <skill>/scripts/setup.sh deps music`)
+- [x] Library fetched, core + music tiers installed
 - [x] `TREATMENT.md` written
-- [x] Demo compared (DIRECTOR.md §11). Changes decided after the comparison, **not yet reflected in TREATMENT.md**:
-  - Score: not the demo's clockwork marimba/woodblock at 120 BPM. Use `core/audio/pluck.py` presets **kalimba + music_box + upright_bass_pizz**, synthesized shaker, ~100 BPM, one instrument added per recipe ingredient.
-  - Signature shot = the vertical track down the chain, riding the pen's arrow. The ending does **not** pull back past the board edge to the wall (that is the demo's ending); end on the circled equation, cap on, Block waves.
-- [ ] Copy `styles/whiteboard/demo/engine/wb.js` into `engine/` and make it size-aware: it hard-codes 1920×1080 (ink canvas, `applyCam` 960/540, `toScreen`, `toWorld`, wall fill, sheen). Use 1080×1920.
-- [ ] Fonts: copy `EMSTech.json` from the demo's `fonts/` (OFL; credit lines in the demo `CREDITS`).
-- [ ] `index.html` + `film.js` (page contract: `DUR`, `render(t)`, `READY`, `EV`, `TEXTS`) → style frames → full build.
-- [ ] `music.py`, `mix.py` (foley from `EV`; see the demo's `mix.py` for marker/magnet/eraser synthesis) → `build.sh` → render with `--size 1080x1920`.
-- [ ] Self-check and deliver (DIRECTOR.md §11): `block-ledgers.mp4`, `poster.jpg`, `TREATMENT.md`, `CREDITS`, `build.sh`. No LemoLab credit in the film.
+- [x] Demo compared (DIRECTOR.md §11); post-comparison decisions now in `TREATMENT.md` (plucked/synth score at 100 BPM, one instrument per ingredient; signature shot = vertical track down the chain; no pull-back past the board edge)
+- [x] `engine/wb.js` copied and made size-aware (`setView(w, h)`: ink canvas, `applyCam`, `toScreen`, `toWorld`, wall fill, wrapping sheen); round magnet prop added
+- [x] Fonts: `fonts/EMSTech.json` (OFL, `fonts/OFL.txt`)
+- [x] `index.html` + `film.js` (page contract: `DUR`, `render(t)`, `READY`, `EV`, `TEXTS`) → style frames → full build
+- [x] `music.py`, `mix.py` → `build.sh` → rendered with `--size 1080x1920`, muxed at −14 LUFS, `readcheck.mjs` passes
+- [x] Self-check and deliver: `block-ledgers.mp4`, `poster.jpg`, `TREATMENT.md`, `CREDITS`, `build.sh` + source. The film carries no library credit or watermark.
+
+## Build
+
+`sh build.sh` (set `LIB=` at its top, or in the environment, to the Lemo-Opuscar library; `PLAYWRIGHT_CHROME=` if Playwright's own browser isn't installed). Outputs `block-ledgers.mp4` and `poster.jpg`; work files go to `out/`.
 
 ## To continue elsewhere
 

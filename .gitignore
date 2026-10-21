@@ -1,0 +1,6 @@
+out/
+stills/
+mix.wav
+music/
+events.json
+node_modules/
